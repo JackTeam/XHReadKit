@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0181E7AD18AA521C00EFD0E0 /* XHContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0181E7AC18AA521C00EFD0E0 /* XHContainerViewController.m */; };
+		01AAAF0618AA780E008224E8 /* XHContentCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAAF0518AA780E008224E8 /* XHContentCollectionCell.m */; };
+		01AAAF0918AA7C56008224E8 /* XHContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAAF0818AA7C56008224E8 /* XHContentTableViewController.m */; };
 		AB07552F18AA952300725BBE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07552E18AA952300725BBE /* Foundation.framework */; };
 		AB07553118AA952300725BBE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07553018AA952300725BBE /* CoreGraphics.framework */; };
 		AB07553318AA952300725BBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07553218AA952300725BBE /* UIKit.framework */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0181E7AB18AA521C00EFD0E0 /* XHContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContainerViewController.h; sourceTree = "<group>"; };
+		0181E7AC18AA521C00EFD0E0 /* XHContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContainerViewController.m; sourceTree = "<group>"; };
+		01AAAF0418AA780E008224E8 /* XHContentCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContentCollectionCell.h; sourceTree = "<group>"; };
+		01AAAF0518AA780E008224E8 /* XHContentCollectionCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContentCollectionCell.m; sourceTree = "<group>"; };
+		01AAAF0718AA7C56008224E8 /* XHContentTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContentTableViewController.h; sourceTree = "<group>"; };
+		01AAAF0818AA7C56008224E8 /* XHContentTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContentTableViewController.m; sourceTree = "<group>"; };
 		AB07552B18AA952300725BBE /* XHReadKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XHReadKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB07552E18AA952300725BBE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AB07553018AA952300725BBE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -162,6 +171,12 @@
 			isa = PBXGroup;
 			children = (
 				AB07555E18AA964F00725BBE /* XHReadKit.h */,
+				0181E7AB18AA521C00EFD0E0 /* XHContainerViewController.h */,
+				0181E7AC18AA521C00EFD0E0 /* XHContainerViewController.m */,
+				01AAAF0418AA780E008224E8 /* XHContentCollectionCell.h */,
+				01AAAF0518AA780E008224E8 /* XHContentCollectionCell.m */,
+				01AAAF0718AA7C56008224E8 /* XHContentTableViewController.h */,
+				01AAAF0818AA7C56008224E8 /* XHContentTableViewController.m */,
 				AB07556E18AA9BA400725BBE /* Common */,
 				AB07556718AA9AC000725BBE /* Models */,
 				AB07556A18AA9AD400725BBE /* Views */,
@@ -315,7 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0181E7AD18AA521C00EFD0E0 /* XHContainerViewController.m in Sources */,
 				AB07556218AA96EE00725BBE /* XHItem.m in Sources */,
+				01AAAF0618AA780E008224E8 /* XHContentCollectionCell.m in Sources */,
+				01AAAF0918AA7C56008224E8 /* XHContentTableViewController.m in Sources */,
 				AB07553F18AA952300725BBE /* AppDelegate.m in Sources */,
 				AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */,
 				AB07556618AA988200725BBE /* XHViewController.m in Sources */,
