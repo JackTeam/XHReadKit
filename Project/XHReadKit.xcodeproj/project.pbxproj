@@ -20,6 +20,7 @@
 		AB07555218AA952300725BBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB07555018AA952300725BBE /* InfoPlist.strings */; };
 		AB07555418AA952300725BBE /* XHReadKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07555318AA952300725BBE /* XHReadKitTests.m */; };
 		AB07556218AA96EE00725BBE /* XHItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556118AA96EE00725BBE /* XHItem.m */; };
+		AB07556618AA988200725BBE /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556518AA988200725BBE /* XHViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		AB07556018AA96EE00725BBE /* XHItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHItem.h; sourceTree = "<group>"; };
 		AB07556118AA96EE00725BBE /* XHItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHItem.m; sourceTree = "<group>"; };
 		AB07556318AA97EC00725BBE /* XHReadKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHReadKitHeader.h; sourceTree = "<group>"; };
+		AB07556418AA988200725BBE /* XHViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHViewController.h; sourceTree = "<group>"; };
+		AB07556518AA988200725BBE /* XHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 			children = (
 				AB07553D18AA952300725BBE /* AppDelegate.h */,
 				AB07553E18AA952300725BBE /* AppDelegate.m */,
+				AB07556418AA988200725BBE /* XHViewController.h */,
+				AB07556518AA988200725BBE /* XHViewController.m */,
 				AB07554018AA952300725BBE /* Images.xcassets */,
 				AB07553518AA952300725BBE /* Supporting Files */,
 			);
@@ -267,6 +272,7 @@
 			files = (
 				AB07556218AA96EE00725BBE /* XHItem.m in Sources */,
 				AB07553F18AA952300725BBE /* AppDelegate.m in Sources */,
+				AB07556618AA988200725BBE /* XHViewController.m in Sources */,
 				AB07553B18AA952300725BBE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
