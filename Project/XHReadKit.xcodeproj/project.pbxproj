@@ -162,7 +162,7 @@
 			isa = PBXGroup;
 			children = (
 				AB07555E18AA964F00725BBE /* XHReadKit.h */,
-				AB07556318AA97EC00725BBE /* XHReadKitHeader.h */,
+				AB07556E18AA9BA400725BBE /* Common */,
 				AB07556718AA9AC000725BBE /* Models */,
 				AB07556A18AA9AD400725BBE /* Views */,
 				AB07556818AA9AC500725BBE /* Controllers */,
@@ -210,6 +210,14 @@
 			children = (
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		AB07556E18AA9BA400725BBE /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				AB07556318AA97EC00725BBE /* XHReadKitHeader.h */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
