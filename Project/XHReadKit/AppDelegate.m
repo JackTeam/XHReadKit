@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "XHReadKit.h"
 #import "XHViewController.h"
 
 @implementation AppDelegate
