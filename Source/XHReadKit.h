@@ -11,4 +11,6 @@
 
 #import "XHReadKitHeader.h"
 
+#import "XHCustomNavigationController.h"
+
 #endif
