@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "XHReadKit.h"
 
 @implementation AppDelegate
 

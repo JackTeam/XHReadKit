@@ -9,6 +9,6 @@
 #ifndef XHReadKit_XHReadKit_h
 #define XHReadKit_XHReadKit_h
 
-
+#import "XHReadKitHeader.h"
 
 #endif

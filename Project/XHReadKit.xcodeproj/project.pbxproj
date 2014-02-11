@@ -52,6 +52,7 @@
 		AB07555E18AA964F00725BBE /* XHReadKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHReadKit.h; sourceTree = "<group>"; };
 		AB07556018AA96EE00725BBE /* XHItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHItem.h; sourceTree = "<group>"; };
 		AB07556118AA96EE00725BBE /* XHItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHItem.m; sourceTree = "<group>"; };
+		AB07556318AA97EC00725BBE /* XHReadKitHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHReadKitHeader.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				AB07555E18AA964F00725BBE /* XHReadKit.h */,
+				AB07556318AA97EC00725BBE /* XHReadKitHeader.h */,
 				AB07555F18AA96A700725BBE /* XHItem */,
 			);
 			name = Source;
