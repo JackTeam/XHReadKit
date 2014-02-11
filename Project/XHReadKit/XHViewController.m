@@ -22,12 +22,12 @@
         [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.557 alpha:1.000];
-    
+    self.title = NSLocalizedString(@"Enter ReadKit", @"");
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     button.frame = CGRectMake(0, 0, 200, 200);
     button.center = self.view.center;
     [button addTarget:self action:@selector(buttonClick) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"打开" forState:UIControlStateNormal];
+    [button setTitle:NSLocalizedString(@"Enter ReadKit", @"") forState:UIControlStateNormal];
     [self.view addSubview:button];
 }
 
