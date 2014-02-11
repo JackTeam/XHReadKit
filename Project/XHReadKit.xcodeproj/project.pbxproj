@@ -19,6 +19,7 @@
 		AB07554A18AA952300725BBE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AB07553218AA952300725BBE /* UIKit.framework */; };
 		AB07555218AA952300725BBE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AB07555018AA952300725BBE /* InfoPlist.strings */; };
 		AB07555418AA952300725BBE /* XHReadKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07555318AA952300725BBE /* XHReadKitTests.m */; };
+		AB07556218AA96EE00725BBE /* XHItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556118AA96EE00725BBE /* XHItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		AB07555118AA952300725BBE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AB07555318AA952300725BBE /* XHReadKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XHReadKitTests.m; sourceTree = "<group>"; };
 		AB07555E18AA964F00725BBE /* XHReadKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHReadKit.h; sourceTree = "<group>"; };
+		AB07556018AA96EE00725BBE /* XHItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHItem.h; sourceTree = "<group>"; };
+		AB07556118AA96EE00725BBE /* XHItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,9 +153,19 @@
 			isa = PBXGroup;
 			children = (
 				AB07555E18AA964F00725BBE /* XHReadKit.h */,
+				AB07555F18AA96A700725BBE /* XHItem */,
 			);
 			name = Source;
 			path = ../Source;
+			sourceTree = "<group>";
+		};
+		AB07555F18AA96A700725BBE /* XHItem */ = {
+			isa = PBXGroup;
+			children = (
+				AB07556018AA96EE00725BBE /* XHItem.h */,
+				AB07556118AA96EE00725BBE /* XHItem.m */,
+			);
+			name = XHItem;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +263,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB07556218AA96EE00725BBE /* XHItem.m in Sources */,
 				AB07553F18AA952300725BBE /* AppDelegate.m in Sources */,
 				AB07553B18AA952300725BBE /* main.m in Sources */,
 			);
