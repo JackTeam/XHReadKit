@@ -10,6 +10,15 @@
 
 @implementation XHContentCollectionCell
 
+#pragma mark - General function
+
+- (void)setContentViewControllerAndShow:(UIViewController *) contentViewController {
+    self.contentViewController = contentViewController;
+    [self addSubview:contentViewController.view];
+}
+
+#pragma mark - Life cycle
+
 - (id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -17,9 +26,8 @@
     return self;
 }
 
-- (void)setContentViewControllerAndShow:(UIViewController *) contentViewController {
-    self.contentViewController = contentViewController;
-    [self addSubview:contentViewController.view];
+- (void)prepareForReuse {
+    [self.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
 
 @end
