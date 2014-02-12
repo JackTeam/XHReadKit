@@ -16,7 +16,7 @@
 
 @property (nonatomic, strong) UICollectionView *containerCollectionView;
 
-- (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize : (CGSize) cellSize;
+- (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize:(CGSize) cellSize;
 @end
 
 @implementation XHContainerViewController
@@ -27,7 +27,7 @@
 
 #pragma mark - Private
 
-- (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize : (CGSize) cellSize {
+- (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize:(CGSize) cellSize {
     UICollectionViewFlowLayout *layout = [[UICollectionViewFlowLayout alloc] init];
     layout.itemSize = cellSize;
     layout.minimumInteritemSpacing = layout.minimumLineSpacing = 0.0f;

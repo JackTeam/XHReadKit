@@ -17,7 +17,7 @@
     return self;
 }
 
--(void) setContentViewControllerAndShow : (UIViewController*) contentViewController {
+- (void)setContentViewControllerAndShow:(UIViewController *) contentViewController {
     self.contentViewController = contentViewController;
     [self addSubview:contentViewController.view];
 }

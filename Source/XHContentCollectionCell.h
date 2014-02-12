@@ -12,6 +12,6 @@
 
 @property (nonatomic, strong) UIViewController *contentViewController;
 
--(void) setContentViewControllerAndShow : (UIViewController*) contentViewController;
+- (void)setContentViewControllerAndShow:(UIViewController *) contentViewController;
 
 @end
