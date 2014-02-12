@@ -15,7 +15,7 @@
 
 @end
 
-@interface XHColumnManagerViewController : UIViewController
+@interface XHColumnManagerViewController : XHBaseViewController
 @property (nonatomic, assign) id <XHColumnItemManagerViewControllerDelegate> delegate;
 @property (nonatomic, strong) NSArray *subscribed; // Has subscribed to the column
 @property (nonatomic, strong) NSArray *unSubscribed; // In the local or network search back not subscribe to the columns

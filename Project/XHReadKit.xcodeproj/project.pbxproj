@@ -24,6 +24,7 @@
 		AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */; };
 		AB7319C618AB93080082D9AB /* XHColumnManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */; };
 		AB7319CA18AB94190082D9AB /* XHColumnItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7319C918AB94190082D9AB /* XHColumnItemView.m */; };
+		AB7319CF18AB96250082D9AB /* XHBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7319CE18AB96250082D9AB /* XHBaseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHColumnManagerViewController.m; sourceTree = "<group>"; };
 		AB7319C818AB94190082D9AB /* XHColumnItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHColumnItemView.h; sourceTree = "<group>"; };
 		AB7319C918AB94190082D9AB /* XHColumnItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHColumnItemView.m; sourceTree = "<group>"; };
+		AB7319CD18AB96250082D9AB /* XHBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHBaseViewController.h; sourceTree = "<group>"; };
+		AB7319CE18AB96250082D9AB /* XHBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHBaseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,8 +201,8 @@
 		AB07556818AA9AC500725BBE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				AB07556B18AA9AF300725BBE /* XHCustomNavigationController.h */,
-				AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */,
+				AB7319CC18AB96140082D9AB /* XHBaseViewController */,
+				AB7319CB18AB96090082D9AB /* XHCustomNavigationController */,
 				AB7319C318AB92E90082D9AB /* XHColumnManagerViewController */,
 			);
 			name = Controllers;
@@ -236,6 +239,24 @@
 				AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */,
 			);
 			name = XHColumnManagerViewController;
+			sourceTree = "<group>";
+		};
+		AB7319CB18AB96090082D9AB /* XHCustomNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				AB07556B18AA9AF300725BBE /* XHCustomNavigationController.h */,
+				AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */,
+			);
+			name = XHCustomNavigationController;
+			sourceTree = "<group>";
+		};
+		AB7319CC18AB96140082D9AB /* XHBaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB7319CD18AB96250082D9AB /* XHBaseViewController.h */,
+				AB7319CE18AB96250082D9AB /* XHBaseViewController.m */,
+			);
+			name = XHBaseViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,6 +357,7 @@
 				AB07556218AA96EE00725BBE /* XHItem.m in Sources */,
 				AB07553F18AA952300725BBE /* AppDelegate.m in Sources */,
 				AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */,
+				AB7319CF18AB96250082D9AB /* XHBaseViewController.m in Sources */,
 				AB07556618AA988200725BBE /* XHViewController.m in Sources */,
 				AB7319C618AB93080082D9AB /* XHColumnManagerViewController.m in Sources */,
 				AB7319CA18AB94190082D9AB /* XHColumnItemView.m in Sources */,
