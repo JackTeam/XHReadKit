@@ -23,6 +23,7 @@
 		AB07556618AA988200725BBE /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556518AA988200725BBE /* XHViewController.m */; };
 		AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */; };
 		AB7319C618AB93080082D9AB /* XHColumnManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */; };
+		AB7319CA18AB94190082D9AB /* XHColumnItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7319C918AB94190082D9AB /* XHColumnItemView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCustomNavigationController.m; sourceTree = "<group>"; };
 		AB7319C418AB93080082D9AB /* XHColumnManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHColumnManagerViewController.h; sourceTree = "<group>"; };
 		AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHColumnManagerViewController.m; sourceTree = "<group>"; };
+		AB7319C818AB94190082D9AB /* XHColumnItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHColumnItemView.h; sourceTree = "<group>"; };
+		AB7319C918AB94190082D9AB /* XHColumnItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHColumnItemView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -212,6 +215,8 @@
 		AB07556A18AA9AD400725BBE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				AB7319C818AB94190082D9AB /* XHColumnItemView.h */,
+				AB7319C918AB94190082D9AB /* XHColumnItemView.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -333,6 +338,7 @@
 				AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */,
 				AB07556618AA988200725BBE /* XHViewController.m in Sources */,
 				AB7319C618AB93080082D9AB /* XHColumnManagerViewController.m in Sources */,
+				AB7319CA18AB94190082D9AB /* XHColumnItemView.m in Sources */,
 				AB07553B18AA952300725BBE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
