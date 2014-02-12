@@ -22,6 +22,7 @@
 		AB07556218AA96EE00725BBE /* XHItem.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556118AA96EE00725BBE /* XHItem.m */; };
 		AB07556618AA988200725BBE /* XHViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556518AA988200725BBE /* XHViewController.m */; };
 		AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */; };
+		AB7319C618AB93080082D9AB /* XHColumnManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		AB07556518AA988200725BBE /* XHViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHViewController.m; sourceTree = "<group>"; };
 		AB07556B18AA9AF300725BBE /* XHCustomNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHCustomNavigationController.h; sourceTree = "<group>"; };
 		AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHCustomNavigationController.m; sourceTree = "<group>"; };
+		AB7319C418AB93080082D9AB /* XHColumnManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHColumnManagerViewController.h; sourceTree = "<group>"; };
+		AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHColumnManagerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +197,7 @@
 			children = (
 				AB07556B18AA9AF300725BBE /* XHCustomNavigationController.h */,
 				AB07556C18AA9AF300725BBE /* XHCustomNavigationController.m */,
+				AB7319C318AB92E90082D9AB /* XHColumnManagerViewController */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -218,6 +222,15 @@
 				AB07556318AA97EC00725BBE /* XHReadKitHeader.h */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		AB7319C318AB92E90082D9AB /* XHColumnManagerViewController */ = {
+			isa = PBXGroup;
+			children = (
+				AB7319C418AB93080082D9AB /* XHColumnManagerViewController.h */,
+				AB7319C518AB93080082D9AB /* XHColumnManagerViewController.m */,
+			);
+			name = XHColumnManagerViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,6 +332,7 @@
 				AB07553F18AA952300725BBE /* AppDelegate.m in Sources */,
 				AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */,
 				AB07556618AA988200725BBE /* XHViewController.m in Sources */,
+				AB7319C618AB93080082D9AB /* XHColumnManagerViewController.m in Sources */,
 				AB07553B18AA952300725BBE /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
