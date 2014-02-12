@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		016547F818AB9B1C007BAFCE /* XHItemScrollToolBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 016547F718AB9B1C007BAFCE /* XHItemScrollToolBar.m */; };
+		016547FB18AB9B4E007BAFCE /* XHItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 016547FA18AB9B4E007BAFCE /* XHItemView.m */; };
+		016547FE18AB9BD4007BAFCE /* XHFoundCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 016547FD18AB9BD4007BAFCE /* XHFoundCommon.m */; };
+		0165480318AB9E6E007BAFCE /* tabBar-camera-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 016547FF18AB9E6E007BAFCE /* tabBar-camera-on.png */; };
+		0165480418AB9E6E007BAFCE /* tabBar-camera-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0165480018AB9E6E007BAFCE /* tabBar-camera-on@2x.png */; };
+		0165480518AB9E6E007BAFCE /* tabBar-camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0165480118AB9E6E007BAFCE /* tabBar-camera.png */; };
+		0165480618AB9E6E007BAFCE /* tabBar-camera@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0165480218AB9E6E007BAFCE /* tabBar-camera@2x.png */; };
 		0181E7AD18AA521C00EFD0E0 /* XHContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0181E7AC18AA521C00EFD0E0 /* XHContainerViewController.m */; };
 		01AAAF0618AA780E008224E8 /* XHContentCollectionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAAF0518AA780E008224E8 /* XHContentCollectionCell.m */; };
 		01AAAF0918AA7C56008224E8 /* XHContentTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01AAAF0818AA7C56008224E8 /* XHContentTableViewController.m */; };
@@ -38,6 +45,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		016547F618AB9B1C007BAFCE /* XHItemScrollToolBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHItemScrollToolBar.h; sourceTree = "<group>"; };
+		016547F718AB9B1C007BAFCE /* XHItemScrollToolBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHItemScrollToolBar.m; sourceTree = "<group>"; };
+		016547F918AB9B4E007BAFCE /* XHItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHItemView.h; sourceTree = "<group>"; };
+		016547FA18AB9B4E007BAFCE /* XHItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHItemView.m; sourceTree = "<group>"; };
+		016547FC18AB9BD4007BAFCE /* XHFoundCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHFoundCommon.h; sourceTree = "<group>"; };
+		016547FD18AB9BD4007BAFCE /* XHFoundCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHFoundCommon.m; sourceTree = "<group>"; };
+		016547FF18AB9E6E007BAFCE /* tabBar-camera-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on.png"; sourceTree = "<group>"; };
+		0165480018AB9E6E007BAFCE /* tabBar-camera-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera-on@2x.png"; sourceTree = "<group>"; };
+		0165480118AB9E6E007BAFCE /* tabBar-camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera.png"; sourceTree = "<group>"; };
+		0165480218AB9E6E007BAFCE /* tabBar-camera@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabBar-camera@2x.png"; sourceTree = "<group>"; };
 		0181E7AB18AA521C00EFD0E0 /* XHContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContainerViewController.h; sourceTree = "<group>"; };
 		0181E7AC18AA521C00EFD0E0 /* XHContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHContainerViewController.m; sourceTree = "<group>"; };
 		01AAAF0418AA780E008224E8 /* XHContentCollectionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHContentCollectionCell.h; sourceTree = "<group>"; };
@@ -141,6 +158,10 @@
 		AB07553518AA952300725BBE /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				016547FF18AB9E6E007BAFCE /* tabBar-camera-on.png */,
+				0165480018AB9E6E007BAFCE /* tabBar-camera-on@2x.png */,
+				0165480118AB9E6E007BAFCE /* tabBar-camera.png */,
+				0165480218AB9E6E007BAFCE /* tabBar-camera@2x.png */,
 				AB07553618AA952300725BBE /* XHReadKit-Info.plist */,
 				AB07553718AA952300725BBE /* InfoPlist.strings */,
 				AB07553A18AA952300725BBE /* main.m */,
@@ -177,6 +198,12 @@
 				01AAAF0518AA780E008224E8 /* XHContentCollectionCell.m */,
 				01AAAF0718AA7C56008224E8 /* XHContentTableViewController.h */,
 				01AAAF0818AA7C56008224E8 /* XHContentTableViewController.m */,
+				016547F618AB9B1C007BAFCE /* XHItemScrollToolBar.h */,
+				016547F718AB9B1C007BAFCE /* XHItemScrollToolBar.m */,
+				016547F918AB9B4E007BAFCE /* XHItemView.h */,
+				016547FA18AB9B4E007BAFCE /* XHItemView.m */,
+				016547FC18AB9BD4007BAFCE /* XHFoundCommon.h */,
+				016547FD18AB9BD4007BAFCE /* XHFoundCommon.m */,
 				AB07556E18AA9BA400725BBE /* Common */,
 				AB07556718AA9AC000725BBE /* Models */,
 				AB07556A18AA9AD400725BBE /* Views */,
@@ -310,8 +337,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0165480418AB9E6E007BAFCE /* tabBar-camera-on@2x.png in Resources */,
+				0165480518AB9E6E007BAFCE /* tabBar-camera.png in Resources */,
 				AB07553918AA952300725BBE /* InfoPlist.strings in Resources */,
+				0165480618AB9E6E007BAFCE /* tabBar-camera@2x.png in Resources */,
 				AB07554118AA952300725BBE /* Images.xcassets in Resources */,
+				0165480318AB9E6E007BAFCE /* tabBar-camera-on.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,13 +362,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0181E7AD18AA521C00EFD0E0 /* XHContainerViewController.m in Sources */,
+				016547FE18AB9BD4007BAFCE /* XHFoundCommon.m in Sources */,
 				AB07556218AA96EE00725BBE /* XHItem.m in Sources */,
 				01AAAF0618AA780E008224E8 /* XHContentCollectionCell.m in Sources */,
 				01AAAF0918AA7C56008224E8 /* XHContentTableViewController.m in Sources */,
 				AB07553F18AA952300725BBE /* AppDelegate.m in Sources */,
+				016547FB18AB9B4E007BAFCE /* XHItemView.m in Sources */,
 				AB07556D18AA9AF300725BBE /* XHCustomNavigationController.m in Sources */,
 				AB07556618AA988200725BBE /* XHViewController.m in Sources */,
 				AB07553B18AA952300725BBE /* main.m in Sources */,
+				016547F818AB9B1C007BAFCE /* XHItemScrollToolBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

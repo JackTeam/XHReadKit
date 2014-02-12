@@ -9,6 +9,8 @@
 #import "XHContainerViewController.h"
 
 #import "XHItem.h"
+#import "XHItemScrollToolBar.h"
+#import "XHFoundCommon.h"
 #import "XHContentCollectionCell.h"
 #import "XHContentTableViewController.h"
 
@@ -17,6 +19,8 @@
 @property (nonatomic, strong) UICollectionView *containerCollectionView;
 
 - (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize:(CGSize) cellSize;
+- (CGRect)collectionViewFrame;
+
 @end
 
 @implementation XHContainerViewController
@@ -35,12 +39,16 @@
     return layout;
 }
 
+- (CGRect)collectionViewFrame {
+    CGFloat topItemsHeight = [XHFoundCommon getAdapterHeight]+kXHItemScrollToolBarHeight;
+    return CGRectMake(0, topItemsHeight, CGRectGetWidth(self.view.bounds), CGRectGetHeight(self.view.bounds) - topItemsHeight);
+}
+
 #pragma mark - Setup UI
 
 - (void)_setupContainer {
-#warning 這邊的 _containerCollectionView init size 是需要修改的, 會影響到後面 cell 的大小是否超出邊界.
-    _containerCollectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds
-                                                  collectionViewLayout:[self makeCollectionViewLayoutWithSize:self.view.bounds.size]];
+    _containerCollectionView = [[UICollectionView alloc] initWithFrame:[self collectionViewFrame]
+                                                  collectionViewLayout:[self makeCollectionViewLayoutWithSize:[self collectionViewFrame].size]];
     _containerCollectionView.delegate = self;
     _containerCollectionView.dataSource = self;
     _containerCollectionView.pagingEnabled = YES;
@@ -52,7 +60,23 @@
 }
 
 - (void)_setupTopScrollBar {
-#warning 工作中...
+    NSMutableArray *items = [NSMutableArray array];
+    for (int i = 0; i < 10; i ++) {
+        XHItem *item = [[XHItem alloc] initWithNormalImage:[UIImage imageNamed:@"tabBar-camera"]
+                                             selectedImage:[UIImage imageNamed:@"tabBar-camera-on"]
+                                                     title:@"title5"
+                                         itemSelectedBlcok:^(XHItemView *itemView) {
+                                             NSInteger index = itemView.item.index;
+                                             NSLog(@"index : %d", index);
+                                         }];
+        [items addObject:item];
+    }
+    
+    XHItemScrollToolBar *itemScrollToolBarToMid = [[XHItemScrollToolBar alloc] initWithFrame:CGRectMake(0, [XHFoundCommon getAdapterHeight], CGRectGetWidth(self.view.bounds), kXHItemScrollToolBarHeight)];
+    itemScrollToolBarToMid.itemWidth = CGRectGetWidth([[UIScreen mainScreen] bounds]) / 5.0;
+    itemScrollToolBarToMid.items = items;
+    [self.view addSubview:itemScrollToolBarToMid];
+    [itemScrollToolBarToMid reloadData];
 }
 
 #pragma mark - Life cycle
@@ -70,6 +94,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor grayColor];
     [self _setupContainer];
     [self _setupTopScrollBar];
     if ([self respondsToSelector:@selector(automaticallyAdjustsScrollViewInsets)])
@@ -86,8 +111,8 @@
     static NSString *CellIdentifier = @"XHContentCollectionCell";
     XHContentCollectionCell *cell = (XHContentCollectionCell*) [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    XHContentTableViewController *dummyTableViewController = [[XHContentTableViewController alloc] initWithFrame:_containerCollectionView.bounds];
-    
+    XHContentTableViewController *dummyTableViewController = [[XHContentTableViewController alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([self collectionViewFrame]), CGRectGetHeight([self collectionViewFrame]))];
+
     [cell setContentViewControllerAndShow:dummyTableViewController];
     
     return cell;

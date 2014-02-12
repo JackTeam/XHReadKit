@@ -22,7 +22,6 @@
 	// Do any additional setup after loading the view, typically from a nib.
     if ([self.navigationController.navigationBar respondsToSelector:@selector(setBarTintColor:)])
         [self.navigationController.navigationBar setBarTintColor:[UIColor redColor]];
-    [self.navigationController.navigationBar setTranslucent:NO];
     
     self.view.backgroundColor = [UIColor colorWithWhite:0.557 alpha:1.000];
     self.title = NSLocalizedString(@"Enter ReadKit", @"");
