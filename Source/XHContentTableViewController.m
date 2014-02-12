@@ -9,7 +9,7 @@
 #import "XHContentTableViewController.h"
 
 @interface XHContentTableViewController ()
-
+@property (nonatomic, assign) CGRect currentFrame;
 @end
 
 @implementation XHContentTableViewController
@@ -34,7 +34,7 @@
 
 -(id) initWithFrame : (CGRect) frame {
     self = [super init];
-    self.view.frame = frame;
+    self.currentFrame = frame;
     if (self) {
         [self _setup];
     }
@@ -69,17 +69,14 @@
     NSLog(@"viewDidDisappear");
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    self.view.frame = _currentFrame;
     [self _setupTableView];
 }
 
-- (void)didReceiveMemoryWarning
-{
+- (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - TableView DataSource
