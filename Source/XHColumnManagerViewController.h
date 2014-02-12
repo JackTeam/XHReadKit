@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class XHColumnItemManagerViewController;
+@class XHColumnManagerViewController;
 @protocol XHColumnItemManagerViewControllerDelegate <NSObject>
 
-- (void)managerDidFinish:(XHColumnItemManagerViewController *)columnItemManagerViewController;
+- (void)managerDidFinish:(XHColumnManagerViewController *)columnManagerViewController;
 
 @end
 
