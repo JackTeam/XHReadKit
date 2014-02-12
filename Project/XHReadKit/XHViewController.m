@@ -32,7 +32,7 @@
 }
 
 - (void)buttonClick {
-    [self _pushColumnManagerViewController];
+    
 }
 
 - (void)_pushColumnManagerViewController {
