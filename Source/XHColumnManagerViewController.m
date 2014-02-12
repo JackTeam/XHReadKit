@@ -165,6 +165,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)dealloc {
+    self.subscribed = nil;
+    self.unSubscribed = nil;
+    self.backgroundImageView = nil;
+    self.tipsLabel = nil;
+    self.unSubscribedScrollView = nil;
+    self.subscribedColumnItemViews = nil;
+    self.unSubscribedColumnItemViews = nil;
+}
+
 #pragma mark - 手势操作
 
 - (BOOL)dragItem:(UIPanGestureRecognizer *)recognizer

@@ -51,6 +51,11 @@
     return self;
 }
 
+- (void)dealloc {
+    self.item = nil;
+    self.titleLabel = nil;
+}
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     if (isDrag) {
         [UIView animateWithDuration:0.2f animations:^{

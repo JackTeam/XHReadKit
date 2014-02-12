@@ -32,7 +32,48 @@
 }
 
 - (void)buttonClick {
+    [self _pushColumnManagerViewController];
+}
+
+- (void)_pushColumnManagerViewController {
+    NSMutableArray *items = [NSMutableArray new];
+    NSMutableArray *unItems = [NSMutableArray new];
     
+    int numberOfPanels = 20;
+    for (int i = 0; i < numberOfPanels; i++) {
+        XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItem *item) {
+            
+        }];
+        
+        NSMutableArray *rows = [NSMutableArray array];
+        int numberOfRows = 100;
+        for (int j = 0; j < numberOfRows; j++) {
+            NSString *newsDetail = [[NSString alloc] init];
+            newsDetail = @"新浪微博被收购";
+            [rows addObject:newsDetail];
+        }
+        item.dataSources = rows;
+        
+        [items addObject:item];
+    }
+    
+    for (int i = 20; i < numberOfPanels + 20; i++) {
+        XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItem *item) {
+        }];
+        
+        NSMutableArray *rows = [NSMutableArray array];
+        int numberOfRows = 100;
+        for (int j = 0; j < numberOfRows; j++) {
+            [rows addObject:@""];
+        }
+        item.dataSources = rows;
+        
+        [unItems addObject:item];
+    }
+    XHColumnManagerViewController *columnManagerViewController = [[XHColumnManagerViewController alloc] init];
+    columnManagerViewController.subscribed = items;
+    columnManagerViewController.unSubscribed = unItems;
+    [self.navigationController pushViewController:columnManagerViewController animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

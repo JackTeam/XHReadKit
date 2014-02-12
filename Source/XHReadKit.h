@@ -11,7 +11,12 @@
 
 #import "XHReadKitHeader.h"
 
+// models
+#import "XHItem.h"
+
+// controllers
 #import "XHCustomNavigationController.h"
 #import "XHBaseViewController.h"
+#import "XHColumnManagerViewController.h"
 
 #endif
