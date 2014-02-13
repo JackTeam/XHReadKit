@@ -111,11 +111,28 @@
     static NSString *CellIdentifier = @"XHContentCollectionCell";
     XHContentCollectionCell *cell = (XHContentCollectionCell*) [collectionView dequeueReusableCellWithReuseIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    
     XHContentTableViewController *dummyTableViewController = [[XHContentTableViewController alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([self collectionViewFrame]), CGRectGetHeight([self collectionViewFrame]))];
-
+    
     [cell setContentViewControllerAndShow:dummyTableViewController];
+    [dummyTableViewController beginAppearanceTransition:YES animated:NO];
+    [self willMoveToParentViewController:dummyTableViewController];
+    [self addChildViewController:dummyTableViewController];
+    [self didMoveToParentViewController:dummyTableViewController];
     
     return cell;
+}
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    if (!scrollView.decelerating && !scrollView.tracking && !scrollView.dragging) {
+        // get the visible contentView
+        XHContentCollectionCell *contentCollectionCell = [[self.containerCollectionView visibleCells] lastObject];
+        [contentCollectionCell.contentViewController endAppearanceTransition];
+    }
 }
 
 @end
