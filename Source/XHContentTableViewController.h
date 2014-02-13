@@ -12,6 +12,6 @@
 @property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, assign) CGFloat tableViewContenInsetTop;
 
--(id) initWithFrame : (CGRect) frame;
+- (id)initWithFrame:(CGRect)frame;
 
 @end

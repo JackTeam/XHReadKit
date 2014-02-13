@@ -286,7 +286,6 @@
 		AB07556718AA9AC000725BBE /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				01DEC56018AC9D1D00883D97 /* XHFoundCommon */,
 				AB07555F18AA96A700725BBE /* XHItem */,
 			);
 			name = Models;
@@ -326,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				AB07556318AA97EC00725BBE /* XHReadKitHeader.h */,
+				01DEC56018AC9D1D00883D97 /* XHFoundCommon */,
 			);
 			name = Common;
 			sourceTree = "<group>";
