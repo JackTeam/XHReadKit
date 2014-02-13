@@ -32,14 +32,14 @@
 }
 
 - (void)buttonClick {
-    
+    [self _pushColumnManagerViewController];
 }
 
 - (void)_pushColumnManagerViewController {
     NSMutableArray *items = [NSMutableArray new];
     NSMutableArray *unItems = [NSMutableArray new];
     
-    int numberOfPanels = 20;
+    int numberOfPanels = 12;
     for (int i = 0; i < numberOfPanels; i++) {
         XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItem *item) {
             

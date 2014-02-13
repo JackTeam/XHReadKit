@@ -16,6 +16,8 @@
 #define kTileMarginLeft2 (320.f - kTileMarginLeft1 - kTileWidth)
 #define kTileMargin 10.f
 
+#define kMaxItemCount 20
+
 @interface XHColumnManagerViewController () <XHColumnItemViewDelegate> {
     // 拖动的tile的原始center坐标
     CGPoint _dragFromPoint;
@@ -102,20 +104,39 @@
     
 }
 
-- (void)_setupSubscribedItems {
-    for (XHItem *item in self.subscribed) {
-        NSInteger index = [self.subscribed indexOfObject:item];
+- (CGFloat)_setupItemViews:(NSMutableArray *)itemViews formItems:(NSArray *)items atContainarView:(UIView *)containarView isSubscribed:(BOOL)isSubscribed {
+    for (XHColumnItemView *columnItemView in containarView.subviews) {
+        if ([columnItemView isKindOfClass:[XHColumnItemView class]]) {
+            [columnItemView removeFromSuperview];
+        }
+    }
+    CGFloat containarViewHeight = 0;
+    for (XHItem *item in items) {
+        NSInteger index = [items indexOfObject:item];
         CGRect columnItemViewFrame = CGRectMake(16 + (index % 4) * (65 + 10), 15 + (index / 4) * (30 + 4), 65, 30);
+        if (index == items.count - 1) {
+            containarViewHeight += CGRectGetMaxY(columnItemViewFrame) + 15;
+        }
         XHColumnItemView *columnItemView = nil;
-        if (index == 0) {
-            columnItemView = [[XHColumnItemView alloc] initWithFrame:columnItemViewFrame target:nil action:NULL isTapHandle:NO];
+        if (isSubscribed) {
+            if (index == 0) {
+                columnItemView = [[XHColumnItemView alloc] initWithFrame:columnItemViewFrame target:nil action:NULL isTapHandle:NO];
+            } else {
+                columnItemView = [[XHColumnItemView alloc] initWithFrame:columnItemViewFrame target:self action:@selector(dragItem:) isTapHandle:NO];
+            }
         } else {
-            columnItemView = [[XHColumnItemView alloc] initWithFrame:columnItemViewFrame target:self action:@selector(dragItem:) isTapHandle:NO];
+            columnItemView = [[XHColumnItemView alloc] initWithFrame:columnItemViewFrame target:self action:NULL isTapHandle:YES];
+            columnItemView.delegate = self;
         }
         columnItemView.item = item;
-        [self.view addSubview:columnItemView];
-        [self.subscribedColumnItemViews addObject:columnItemView];
+        [containarView addSubview:columnItemView];
+        [itemViews addObject:columnItemView];
     }
+    return containarViewHeight;
+}
+
+- (void)_setupSubscribedItems {
+    [self _setupItemViews:self.subscribedColumnItemViews formItems:self.subscribed atContainarView:self.view isSubscribed:YES];
 }
 
 - (void)_setupTipsLabel {
@@ -130,17 +151,8 @@
         [self.view addSubview:self.unSubscribedScrollView];
     }
     
-    CGFloat contentHeight = 15 + (30 + 4) * (self.unSubscribed.count / 4) + (self.unSubscribed.count % 4 ? 1 : 0);
-    for (XHItem *item in self.unSubscribed) {
-        NSInteger index = [self.subscribed indexOfObject:item];
-        CGRect columnItemViewFrame = CGRectMake(16 + (index % 4) * (65 + 10), 15 + (index / 4) * (30 + 4), 65, 30);
-        XHColumnItemView *columnItemView = [[XHColumnItemView alloc] initWithFrame:columnItemViewFrame target:self action:NULL isTapHandle:YES];
-        columnItemView.delegate = self;
-        columnItemView.item = item;
-        [_unSubscribedScrollView addSubview:columnItemView];
-        [self.unSubscribedColumnItemViews addObject:columnItemView];
-    }
-    _unSubscribedScrollView.contentSize = CGSizeMake(0, contentHeight);
+    CGFloat containarViewHeight = [self _setupItemViews:self.unSubscribedColumnItemViews formItems:self.unSubscribed atContainarView:self.unSubscribedScrollView isSubscribed:NO];
+    _unSubscribedScrollView.contentSize = CGSizeMake(0, containarViewHeight);
 }
 
 - (void)viewDidLoad
@@ -268,8 +280,23 @@
 #pragma mark - XHColumnItemViewDelegate
 
 - (void)didSelected:(XHColumnItemView *)columnItemView {
-    [self.subscribedColumnItemViews addObject:columnItemView];
-    [self _setupSubscribedItems];
+    if (self.subscribed.count < kMaxItemCount) {
+        // 进行添加
+        NSMutableArray *subscribed = [NSMutableArray arrayWithArray:self.subscribed];
+        [subscribed addObject:columnItemView.item];
+        self.subscribed = subscribed;
+        [self.subscribedColumnItemViews addObject:columnItemView];
+        
+        NSMutableArray *unSubscribed = [NSMutableArray arrayWithArray:self.unSubscribed];
+        [unSubscribed removeObject:columnItemView.item];
+        self.unSubscribed = unSubscribed;
+        [self.unSubscribedColumnItemViews removeObject:columnItemView];
+        [self _setupSubscribedItems];
+        [self _setupUnSubscribedItems];
+    } else {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"警告" message:@"已经满了" delegate:nil cancelButtonTitle:nil otherButtonTitles:@"确定", nil];
+        [alertView show];
+    }
 }
 
 @end
