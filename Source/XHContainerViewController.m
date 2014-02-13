@@ -17,7 +17,6 @@
 @interface XHContainerViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *containerCollectionView;
-@property (nonatomic, weak) XHContentCollectionCell *currentContentCollectionCell;
 
 - (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize:(CGSize) cellSize;
 - (CGRect)collectionViewFrame;
