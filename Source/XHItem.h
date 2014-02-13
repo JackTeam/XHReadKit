@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@class XHItem;
-typedef void(^XHItemSelectedBlcok)(XHItem *item);
+@class XHItemView;
+typedef void(^XHItemSelectedBlcok)(XHItemView *itemView);
 
 @interface XHItem : NSObject
 @property (nonatomic, assign) NSInteger index;

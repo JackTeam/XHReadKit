@@ -8,6 +8,8 @@
 
 #import "XHViewController.h"
 
+#import "XHContainerViewController.h"
+
 @interface XHViewController ()
 
 @end
@@ -32,7 +34,6 @@
 }
 
 - (void)buttonClick {
-    [self _pushColumnManagerViewController];
 }
 
 - (void)_pushColumnManagerViewController {
@@ -41,7 +42,7 @@
     
     int numberOfPanels = 12;
     for (int i = 0; i < numberOfPanels; i++) {
-        XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItem *item) {
+        XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItemView *itemView) {
             
         }];
         
@@ -58,7 +59,7 @@
     }
     
     for (int i = 20; i < numberOfPanels + 20; i++) {
-        XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItem *item) {
+        XHItem *item = [[XHItem alloc] initWithNormalImage:nil selectedImage:nil title:[NSString stringWithFormat:@"Title%d", i] itemSelectedBlcok:^(XHItemView *itemView) {
         }];
         
         NSMutableArray *rows = [NSMutableArray array];
