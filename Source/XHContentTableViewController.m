@@ -21,6 +21,7 @@
     tableView.dataSource = self;
     [tableView setScrollsToTop:NO];
     [self.view addSubview:tableView];
+    self.tableView = tableView;
     UIEdgeInsets contentInset = tableView.contentInset;
     contentInset.top = self.tableViewContenInsetTop;
     tableView.contentInset = contentInset;
@@ -57,11 +58,13 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     NSLog(@"viewWillAppear");
+    [self.tableView setScrollsToTop:YES];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     NSLog(@"viewWillDisappear");
+    [self.tableView setScrollsToTop:NO];
 }
 
 - (void)viewDidDisappear:(BOOL)animated {
@@ -72,6 +75,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.frame = _currentFrame;
+    self.view.backgroundColor = [UIColor grayColor];
     [self _setupTableView];
 }
 
@@ -94,6 +98,10 @@
     cell.textLabel.text = @"测试";
     
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [self.navigationController pushViewController:[[XHContentTableViewController alloc] init] animated:YES];
 }
 
 @end

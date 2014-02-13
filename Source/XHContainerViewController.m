@@ -17,6 +17,7 @@
 @interface XHContainerViewController () <UICollectionViewDelegate, UICollectionViewDataSource>
 
 @property (nonatomic, strong) UICollectionView *containerCollectionView;
+@property (nonatomic, weak) XHContentCollectionCell *currentContentCollectionCell;
 
 - (UICollectionViewFlowLayout *)makeCollectionViewLayoutWithSize:(CGSize) cellSize;
 - (CGRect)collectionViewFrame;
@@ -52,6 +53,7 @@
     _containerCollectionView.delegate = self;
     _containerCollectionView.dataSource = self;
     _containerCollectionView.pagingEnabled = YES;
+    [_containerCollectionView setScrollsToTop:NO];
     _containerCollectionView.showsHorizontalScrollIndicator = NO;
     _containerCollectionView.showsVerticalScrollIndicator = NO;
     _containerCollectionView.backgroundColor = [UIColor clearColor];
@@ -115,24 +117,9 @@
     XHContentTableViewController *dummyTableViewController = [[XHContentTableViewController alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth([self collectionViewFrame]), CGRectGetHeight([self collectionViewFrame]))];
     
     [cell setContentViewControllerAndShow:dummyTableViewController];
-    [dummyTableViewController beginAppearanceTransition:YES animated:NO];
-    [self willMoveToParentViewController:dummyTableViewController];
     [self addChildViewController:dummyTableViewController];
-    [self didMoveToParentViewController:dummyTableViewController];
     
     return cell;
-}
-
-- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
-    
-}
-
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
-    if (!scrollView.decelerating && !scrollView.tracking && !scrollView.dragging) {
-        // get the visible contentView
-        XHContentCollectionCell *contentCollectionCell = [[self.containerCollectionView visibleCells] lastObject];
-        [contentCollectionCell.contentViewController endAppearanceTransition];
-    }
 }
 
 @end

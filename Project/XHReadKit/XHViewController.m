@@ -32,8 +32,9 @@
     [button setTitle:NSLocalizedString(@"Enter ReadKit", @"") forState:UIControlStateNormal];
     [self.view addSubview:button];
 }
-
+// [self.navigationController pushViewController:[[XHContainerViewController alloc] init] animated:YES];
 - (void)buttonClick {
+    
 }
 
 - (void)_pushColumnManagerViewController {
